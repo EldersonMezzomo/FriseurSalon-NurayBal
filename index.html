@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friseur Salon Nuray Bal</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header (cabeçalho) com logo, menu e seletor de idioma -->
+    <header>
+        <div class="container">
+            <!-- Logo do salão -->
+            <div class="logo">
+                <h1>Friseur Salon Nuray Bal</h1> <!-- Pode ser substituído por uma imagem -->
+            </div>
+
+            <!-- Menu de navegação superior (somente na versão web) -->
+            <nav class="nav-wrapper">
+                <ul class="nav-menu">
+                    <li><a href="#home" id="home-link">Startseite</a></li> <!-- Página inicial -->
+                    <li><a href="#about" id="about-link">Über Uns</a></li> <!-- Sobre nós -->
+                    <li><a href="#services" id="services-link">Dienstleistungen</a></li> <!-- Serviços -->
+                    <li><a href="#contact" id="contact-link">Kontakt</a></li> <!-- Contato -->
+                    <li class="language-selector">
+                        <img src="assets/flags/de.svg" alt="Deutsch" onclick="loadLanguage('de')">
+                        <img src="assets/flags/en.svg" alt="English" onclick="loadLanguage('en')">
+                        <img src="assets/flags/pt.svg" alt="Português" onclick="loadLanguage('pt')">
+                        <img src="assets/flags/tr.svg" alt="Türkçe" onclick="loadLanguage('tr')">
+                        <img src="assets/flags/ua.svg" alt="Українська" onclick="loadLanguage('ua')">
+                        <img src="assets/flags/es.svg" alt="Español" onclick="loadLanguage('es')">
+                    </li>
+                </ul>
+                
+
+            </nav>
+
+            <!-- Menu hamburguer (somente para mobile) -->
+            <div class="hamburger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <!-- Menu do rodapé (somente para mobile) -->
+            <nav class="mobile-nav">
+                <ul>
+                    <li><a href="#home"><i class="fas fa-home"></i></a></li>
+                    <li><a href="tel:+4915227532359"><i class="fas fa-phone"></i></a></li>
+                    <li><a href="https://wa.me/4915227532359"><i class="fab fa-whatsapp"></i></a></li>
+                    <li><a href="#booking"><i class="fas fa-calendar-alt"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Seção Home -->
+    <section id="home" class="home-section">
+        <div class="container">
+            <h2>Willkommen bei Friseur Salon Nuray Bal</h2>
+            <p>Erleben Sie unseren erstklassigen Service in einer gemütlichen Atmosphäre.</p>
+        </div>
+    </section>
+
+    <!-- Seção Sobre Uns -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>Über Uns</h2>
+            <p>Wir sind ein professionelles Friseurteam, das sich auf moderne und klassische Frisuren spezialisiert hat.
+            </p>
+        </div>
+    </section>
+
+    <!-- Seção Serviços -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2>Unsere Dienstleistungen</h2>
+            <ul>
+                <li>Haarschnitt</li>
+                <li>Coloration</li>
+                <li>Styling</li>
+                <li>Pflegeprodukte</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Seção de Agendamento -->
+    <section id="booking" class="booking-section">
+        <div class="container">
+            <h2>Vereinbaren Sie einen Termin</h2>
+            <form id="booking-form">
+                <label for="service">Dienstleistung:</label>
+                <select id="service" name="service">
+                    <option value="" disabled selected>Wählen Sie eine Dienstleistung</option>
+                    <option value="haarschnitt">Haarschnitt</option>
+                    <option value="coloration">Coloration</option>
+                    <option value="styling">Styling</option>
+                </select>
+
+                <label for="date">Datum:</label>
+                <input type="date" id="date" name="date">
+
+                <label for="time">Uhrzeit:</label>
+                <input type="time" id="time" name="time">
+
+                <label for="professional">Professionell:</label>
+                <select id="professional" name="professional">
+                    <option value="nuray">Nuray Bal</option>
+                    <option value="other">Anderer Stylist</option>
+                </select>
+
+                <button type="submit">Termin Buchen</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Kontakt</h2>
+            <p>Steinweg 40, 35037 Marburg</p>
+            <p>Telefon: <a href="tel:+4915227532359">0152/27532359</a></p>
+            <p>E-Mail: <a href="mailto:info@friseursalon-nuraybal.de">info@friseursalon-nuraybal.de</a></p>
+
+            <!-- Google Maps Embed -->
+            <div id="map"></div> <!-- Aqui adicionaremos o Google Maps -->
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Friseur Salon Nuray Bal. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <!-- Script para o menu hamburguer e troca de idiomas -->
+    <script src="scripts.js"></script>
+</body>
+
+</html>

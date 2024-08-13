@@ -1,0 +1,29 @@
+{
+    "header": {
+        "home": "Anasayfa",
+        "about": "Hakkımızda",
+        "services": "Hizmetler",
+        "contact": "İletişim"
+    },
+    "home": {
+        "welcome": "Friseur Salon Nuray Bal'a Hoşgeldiniz",
+        "description": "Rahat bir atmosferde en kaliteli hizmetimizi deneyimleyin."
+    },
+    "about": {
+        "title": "Hakkımızda",
+        "description": "Modern ve klasik saç modelleri konusunda uzmanlaşmış profesyonel bir kuaför ekibiyiz."
+    },
+    "services": {
+        "title": "Hizmetlerimiz",
+        "cut": "Saç Kesimi",
+        "color": "Renklendirme",
+        "style": "Şekillendirme",
+        "products": "Bakım Ürünleri"
+    },
+    "contact": {
+        "title": "İletişim",
+        "address": "Steinweg 40, 35037 Marburg",
+        "phone": "Telefon: 0152/27532359",
+        "email": "E-posta: info@friseursalon-nuraybal.de"
+    }
+}

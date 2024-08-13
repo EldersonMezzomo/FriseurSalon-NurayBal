@@ -1,0 +1,29 @@
+{
+    "header": {
+        "home": "Startseite",
+        "about": "Über Uns",
+        "services": "Dienstleistungen",
+        "contact": "Kontakt"
+    },
+    "home": {
+        "welcome": "Willkommen bei Friseur Salon Nuray Bal",
+        "description": "Erleben Sie unseren erstklassigen Service in einer gemütlichen Atmosphäre."
+    },
+    "about": {
+        "title": "Über Uns",
+        "description": "Wir sind ein professionelles Friseurteam, das sich auf moderne und klassische Frisuren spezialisiert hat."
+    },
+    "services": {
+        "title": "Unsere Dienstleistungen",
+        "cut": "Haarschnitt",
+        "color": "Coloration",
+        "style": "Styling",
+        "products": "Pflegeprodukte"
+    },
+    "contact": {
+        "title": "Kontakt",
+        "address": "Steinweg 40, 35037 Marburg",
+        "phone": "Telefon: 0152/27532359",
+        "email": "E-Mail: info@friseursalon-nuraybal.de"
+    }
+}

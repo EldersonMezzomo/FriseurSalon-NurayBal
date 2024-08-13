@@ -1,0 +1,29 @@
+{
+    "header": {
+        "home": "Inicio",
+        "about": "Sobre Nosotros",
+        "services": "Servicios",
+        "contact": "Contacto"
+    },
+    "home": {
+        "welcome": "Bienvenido a Friseur Salon Nuray Bal",
+        "description": "Experimente nuestro servicio de alta calidad en un ambiente acogedor."
+    },
+    "about": {
+        "title": "Sobre Nosotros",
+        "description": "Somos un equipo profesional de peluqueros especializados en peinados modernos y clásicos."
+    },
+    "services": {
+        "title": "Nuestros Servicios",
+        "cut": "Corte de Pelo",
+        "color": "Coloración",
+        "style": "Estilismo",
+        "products": "Productos de Cuidado"
+    },
+    "contact": {
+        "title": "Contacto",
+        "address": "Steinweg 40, 35037 Marburg",
+        "phone": "Teléfono: 0152/27532359",
+        "email": "Correo electrónico: info@friseursalon-nuraybal.de"
+    }
+}
