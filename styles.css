@@ -1,107 +1,158 @@
-/* Reset básico */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Variáveis para cores, fontes e tamanhos */
+/* Variables */
 :root {
-    --primary-color: #333; /* Cor primária (geral) */
-    --secondary-color: #555; /* Cor secundária */
-    --accent-color: #0095ac; /* Cor de destaque */
-    --background-color: #f9f9f9; /* Cor de fundo */
-    --text-color: #333; /* Cor do texto */
-    --light-text-color: #fff; /* Cor do texto claro */
-    --border-color: #ccc; /* Cor das bordas */
-    --placeholder-color: #ccc; /* Cor do placeholder */
+    --primary-color: #333;
+    --secondary-color: #555;
+    --accent-color: #0095ac;
+    --background-color: #f9f9f9;
+    --background-color2: #ccc;
+    --text-color: #333;
+    --light-text-color: #fff;
+    --border-color: #ccc;
+    --placeholder-color: #ccc;
 
-    --font-family: 'Roboto', sans-serif; /* Fonte principal */
-    --base-font-size: 1rem; /* Tamanho base da fonte */
-    --heading-font-size: 2rem; /* Tamanho das fontes de cabeçalho */
-    --section-padding: 3.75rem 0; /* Padding das seções */
-    --container-max-width: 75rem; /* Largura máxima do container */
-    --container-padding: 1.25rem; /* Padding do container */
-    --input-padding: 0.625rem; /* Padding dos inputs */
-    --input-border-radius: 0.3125rem; /* Border radius dos inputs */
-    --button-padding: 0.625rem 1.25rem; /* Padding dos botões */
-    --button-border-radius: 0.3125rem; /* Border radius dos botões */
-    --header-padding: 1.25rem 0; /* Padding do cabeçalho */
-    --footer-padding: 1.25rem 0; /* Padding do rodapé */
+    --font-family: 'Roboto', sans-serif;
+    --base-font-size: 1rem;
+
+    --heading-font-size: 2rem;
+    --section-padding: 3.75rem 0;
+    --container-max-width: 75rem;
+    --container-padding: 1.25rem;
+    --input-padding: 0.625rem;
+    --input-border-radius: 0.3125rem;
+    --button-padding: 0.625rem 1.25rem;
+    --button-border-radius: 0.3125rem;
+    --header-padding: 1.00rem 0;
+    --footer-padding: 1.25rem 0;
 }
 
-/* Estilo global */
+/* Global Styles */
 body {
-    font-family: var(--font-family);
-    font-size: var(--base-font-size);
     background-color: var(--background-color);
     color: var(--text-color);
+    font-family: var(--font-family);
+    font-size: var(--base-font-size);
     line-height: 1.6;
 }
 
-/* Container padrão */
+/* Container Styles */
 .container {
-    width: 100%;
-    max-width: var(--container-max-width);
     margin: 0 auto;
+    max-width: var(--container-max-width);
     padding: var(--container-padding);
+    width: 100%;
 }
 
-/* Cabeçalho */
-header {
-    background-color: var(--primary-color);
-    padding: var(--header-padding);
-    color: var(--light-text-color);
-    position: fixed; /* Fixa o cabeçalho na parte superior */
-    top: 0; /* Garante que o cabeçalho fique no topo da página */
-    width: 100%; /* Ocupa toda a largura da tela */
-    z-index: 1000; /* Garante que o cabeçalho esteja acima de outros elementos */
+/* Section Specific Styles */
+section {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha, se necessário */
+    justify-content: center;
+    height: 100vh;
 }
 
-header .logo h1 {
-    font-size: var(--heading-font-size);
-    margin: 0;
-    text-align: left; /* Logo alinhado à esquerda */
+/* Scrolling and Overflow Behaviors */
+html,
+body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
-/* Menu de navegação */
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    padding: var(--header-padding);
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+/* Styles for the header logo */
+.logo img {
+    display: block;
+    height: auto;
+    max-width: 200px;
+    min-width: 100px;
+}
+
+/* Navigation menu styles */
+
+/* Transparent header styles */
+.transparent-header {
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+/* Cabeçalho com fundo visível após rolar */
+.header-scrolled {
+    background-color: var(--primary-color);
+}
+
+/* Estilo para o cabeçalho transparente */
+.transparent-header .nav-menu a,
+.transparent-header .logo h1 {
+    color: var(--primary-color);
+}
+
+/* Estilo para o cabeçalho com fundo visível */
+.header-scrolled .nav-menu a,
+.header-scrolled .logo h1 {
+    color: var(--light-text-color);
+}
+
 .nav-wrapper {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    flex-grow: 1; /* Ocupará o espaço restante entre o logo e o seletor de idioma */
+    flex-grow: 1;
+    justify-content: space-between;
 }
 
 .nav-menu {
-    list-style: none;
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 0;
+    justify-content: center;
+    list-style: none;
     margin: 0;
+    padding: 0;
 }
 
 .nav-menu li {
-    margin: 0 0.9375rem;
     display: flex;
     align-items: center;
+    margin: 0 0.9375rem;
 }
 
 .nav-menu a {
-    color: var(--light-text-color);
-    text-decoration: none;
-    font-size: 1rem;
-    transition: color 0.3s;
     display: flex;
-    align-items: center; /* Garante que os ícones e textos estejam na mesma linha */
+    align-items: center;
+    color: var(--light-text-color);
+    font-size: 1rem;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
 .nav-menu a i {
-    margin-right: 0.5rem; /* Espaço entre o ícone e o texto */
+    margin-right: 0.5rem;
 }
 
 .nav-menu a:hover {
@@ -111,40 +162,47 @@ header .logo h1 {
 /* Seletor de idioma */
 .language-selector {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
-    gap: 10px;
+    justify-content: flex-end;
+    margin-left: auto;
     position: relative;
-    z-index: 1001; /* Garante que o seletor esteja acima de outros elementos */
-    margin-left: auto; /* Empurra o seletor de idioma para o final */
+    z-index: 1001;
+}
+
+.language-selector #current-lang {
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 .language-selector img {
+    border: none;
+    border-radius: 50%;
+    display: block;
+    height: 30px;
     width: 30px;
-    height: 20px;
-    cursor: pointer;
-    margin-right: 5px; /* Espaço entre as bandeiras */
 }
 
-.language-options {
+.lang-options {
     display: none;
     position: absolute;
-    top: 40px; /* Ajuste para o espaçamento necessário abaixo da bandeira principal */
-    right: 0; /* Alinhamento à direita */
-    background-color: var(--primary-color);
-    border: 1px solid var(--border-color);
-    border-radius: var(--button-border-radius);
-    padding: 0.5rem;
-    z-index: 1001;
     flex-direction: column;
+    top: 31px;
+    right: 0;
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    z-index: 1001;
 }
 
-.language-selector img:hover {
+.language-selector img:hover,
+.lang-btn:hover img {
     transform: scale(1.1);
 }
 
 /* Exibir opções de idiomas ao passar o mouse */
-.language-selector:hover .language-options {
+.language-selector:hover .lang-options {
     display: flex;
 }
 
@@ -152,32 +210,59 @@ header .logo h1 {
 .hamburger-menu {
     display: none;
     position: absolute;
-    right: 1.25rem;
-    top: 1.25rem;
     cursor: pointer;
+    top: 1.25rem;
+    right: 1.25rem;
 }
 
 .hamburger-menu i {
-    font-size: 1.5rem;
     color: var(--light-text-color);
+    font-size: 1.5rem;
 }
 
 /* Seções */
-section {
-    padding: var(--section-padding);
+
+/* Video de fundo */
+#home-video {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Para garantir que o conteúdo da seção esteja acima do vídeo */
+.home-section {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding-top: 5rem; /* Adicionei esse padding para evitar que o conteúdo seja oculto pelo cabeçalho fixo */
+    height: 100vh;
+    color: var(--light-text-color);
+    }
+
+.home-section .container {
+    z-index: 1;
+}
+
+section {
+    text-align: center;
+    padding: var(--section-padding);
+    padding-top: 5rem;
 }
 
 section h2 {
-    font-size: var(--heading-font-size);
     color: var(--primary-color);
+    font-size: var(--heading-font-size);
     margin-bottom: 1.25rem;
 }
 
 section p {
-    font-size: 1.1rem;
     color: var(--secondary-color);
+    font-size: 1.1rem;
 }
 
 section ul {
@@ -186,9 +271,26 @@ section ul {
 }
 
 section ul li {
-    font-size: 1.1rem;
     color: var(--secondary-color);
+    font-size: 1.1rem;
     margin-bottom: 0.625rem;
+}
+
+.services-section {
+    background-color: var(--background-color2);
+}
+
+.home-section h2 {
+    color: var(--light-text-color);
+    font-size: var(--heading-font-size);
+    margin-bottom: 1.25rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.home-section p {
+    color: var(--light-text-color);
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
 /* Formulário de Agendamento */
@@ -205,10 +307,10 @@ section ul li {
 
 .booking-section input,
 .booking-section select {
-    padding: var(--input-padding);
-    margin-bottom: 1.25rem;
     width: 100%;
     max-width: 18.75rem;
+    padding: var(--input-padding);
+    margin-bottom: 1.25rem;
     font-size: 1rem;
     border: 1px solid var(--border-color);
     border-radius: var(--input-border-radius);
@@ -229,6 +331,28 @@ section ul li {
     background-color: var(--primary-color);
 }
 
+.contact-section a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.contact-section a:hover {
+    text-decoration: underline;
+}
+
+/* Google Maps */
+#map {
+    width: 100%;
+    height: 18.75rem;
+    background-color: var(--placeholder-color);
+    margin-top: 1.25rem;
+}
+
+#map iframe {
+    width: 100%;
+    height: 100%;
+}
+
 /* Rodapé */
 footer {
     background-color: var(--primary-color);
@@ -237,13 +361,6 @@ footer {
     padding: var(--footer-padding);
 }
 
-/* Google Maps */
-#map {
-    width: 100%;
-    height: 18.75rem; /* 300px convertido para rem */
-    background-color: var(--placeholder-color); /* Placeholder até o mapa ser carregado */
-    margin-top: 1.25rem;
-}
 
 /* Media Queries */
 
@@ -252,60 +369,93 @@ footer {
     .nav-menu {
         justify-content: center;
         margin: 0 auto;
-        max-width: 50rem; /* 800px convertido para rem */
+        max-width: 50rem;
     }
 
     .mobile-nav {
-        display: none; /* Certifique-se de que o menu mobile não apareça no desktop */
+        display: none;
+    }
+
+    .mobile-nav.show {
+        display: block;
     }
 
     .booking-section form {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 1.25rem; /* 20px convertido para rem */
+        gap: 1.25rem;
     }
 
     .booking-section input,
     .booking-section select {
         flex: 1;
-        min-width: 12.5rem; /* 200px convertido para rem */
+        min-width: 12.5rem;
     }
 }
 
-/* Estilo para telas menores (Tablet e Smartphone) */
+/* Ajustes para telas menores (Tablet e Smartphone) */
 @media (max-width: 768px) {
+
+    .logo img {
+        max-width: 150px;
+    }
+
     .container {
-        padding: 0.625rem; /* 10px convertido para rem */
+        padding: 0.625rem;
     }
 
     header {
-        padding: 0.625rem 0; /* 10px convertido para rem */
+        padding: 0.625rem 0;
+    }
+
+    header.transparent-header {
+        background-color: var(--primary-color);
+        background: var(--primary-color);
     }
 
     .nav-menu {
-        display: none; /* Oculta o menu principal */
+        display: none;
     }
 
     .hamburger-menu {
-        display: block; /* Exibe o menu hamburguer */
+        display: block;
+        position: absolute;
+        right: 1.25rem;
+        top: 1.25rem;
     }
 
-    .mobile-nav {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background-color: var(--primary-color);
-        display: flex;
-        justify-content: space-around;
-        padding: 0.625rem 0; /* 10px convertido para rem */
+    /* Ajuste para o seletor de idioma */
+    @media (max-width: 768px) {
+        .language-selector {
+            position: absolute;
+            top: 1.25rem;
+            right: 3.75rem;
+            z-index: 1050;
+        }
+
+        .mobile-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--primary-color);
+            display: flex;
+            justify-content: space-around;
+            padding: 0.625rem 0;
+            z-index: 1040;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    .mobile-nav.show {
+        display: block;
     }
 
     .mobile-nav ul {
-        list-style: none;
         display: flex;
         justify-content: space-around;
+        list-style: none;
         width: 100%;
     }
 
@@ -316,6 +466,11 @@ footer {
     .mobile-nav a {
         color: var(--light-text-color);
         font-size: 1.5rem;
+    }
+
+    .nav-wrapper,
+    .nav-menu {
+        display: none;
     }
 
     /* Ajustes nas seções */

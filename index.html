@@ -7,7 +7,6 @@
     <title>Friseur Salon Nuray Bal</title>
 
     <link rel="stylesheet" href="styles.css">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,37 +14,66 @@
 </head>
 
 <body>
-    <!-- Header (cabeçalho) com logo, menu e seletor de idioma -->
-    <header>
-        <div class="container">
+    <header class="transparent-header">
+        <div class="container header-container">
             <!-- Logo do salão -->
             <div class="logo">
-                <h1>Friseur Salon Nuray Bal</h1> <!-- Pode ser substituído por uma imagem -->
+                <a href="#home">
+                    <img src="assets/logo_branco.png" alt="logo Friseur Salon Nuray Bal">
+                </a>
             </div>
 
             <!-- Menu de navegação superior (somente na versão web) -->
             <nav class="nav-wrapper">
                 <ul class="nav-menu">
-                    <li><a href="#home" id="home-link">Startseite</a></li> <!-- Página inicial -->
-                    <li><a href="#about" id="about-link">Über Uns</a></li> <!-- Sobre nós -->
-                    <li><a href="#services" id="services-link">Dienstleistungen</a></li> <!-- Serviços -->
-                    <li><a href="#contact" id="contact-link">Kontakt</a></li> <!-- Contato -->
-                    <li class="language-selector">
-                        <img src="assets/flags/de.svg" alt="Deutsch" onclick="loadLanguage('de')">
-                        <img src="assets/flags/en.svg" alt="English" onclick="loadLanguage('en')">
-                        <img src="assets/flags/pt.svg" alt="Português" onclick="loadLanguage('pt')">
-                        <img src="assets/flags/tr.svg" alt="Türkçe" onclick="loadLanguage('tr')">
-                        <img src="assets/flags/ua.svg" alt="Українська" onclick="loadLanguage('ua')">
-                        <img src="assets/flags/es.svg" alt="Español" onclick="loadLanguage('es')">
-                    </li>
+                    <li><a href="#home" id="home-link">Startseite</a></li>
+                    <li><a href="#about" id="about-link">Über Uns</a></li>
+                    <li><a href="#services" id="services-link">Dienstleistungen</a></li>
+                    <li><a href="#contact" id="contact-link">Kontakt</a></li>
                 </ul>
-                
-
             </nav>
 
+            <!-- Seletor de idioma no cabeçalho -->
+            <div class="language-selector">
+                <button id="current-lang" class="lang-btn">
+                    <img src="assets/flags/de.svg" alt="Deutsch">
+                </button>
+                <div id="lang-options" class="lang-options">
+                    <button id="de" class="lang-btn">
+                        <img src="assets/flags/de.svg" alt="Deutsch">
+                    </button>
+                    <button id="en" class="lang-btn">
+                        <img src="assets/flags/en.svg" alt="English">
+                    </button>
+                    <button id="pt" class="lang-btn">
+                        <img src="assets/flags/pt.svg" alt="Português">
+                    </button>
+                    <button id="tr" class="lang-btn">
+                        <img src="assets/flags/tr.svg" alt="Türkçe">
+                    </button>
+                    <button id="ua" class="lang-btn">
+                        <img src="assets/flags/ua.svg" alt="Українська">
+                    </button>
+                    <button id="es" class="lang-btn">
+                        <img src="assets/flags/es.svg" alt="Español">
+                    </button>
+                </div>
+            </div>
+
             <!-- Menu hamburguer (somente para mobile) -->
-            <div class="hamburger-menu">
-                <i class="fas fa-bars"></i>
+            <div class="hamburger-menu-wrapper">
+                <div class="hamburger-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <!-- Conteúdo do Menu Móvel que será mostrado/ocultado -->
+                <nav class="mobile-nav">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
             </div>
 
             <!-- Menu do rodapé (somente para mobile) -->
@@ -60,15 +88,19 @@
         </div>
     </header>
 
+
     <!-- Seção Home -->
     <section id="home" class="home-section">
+        <video autoplay muted loop id="home-video">
+            <source src="/assets/background 1.mp4" type="video/mp4">
+        </video>
         <div class="container">
             <h2>Willkommen bei Friseur Salon Nuray Bal</h2>
             <p>Erleben Sie unseren erstklassigen Service in einer gemütlichen Atmosphäre.</p>
         </div>
     </section>
 
-    <!-- Seção Sobre Uns -->
+    <!-- Seção Sobre Nós -->
     <section id="about" class="about-section">
         <div class="container">
             <h2>Über Uns</h2>
@@ -124,14 +156,24 @@
     <section id="contact" class="contact-section">
         <div class="container">
             <h2>Kontakt</h2>
-            <p>Steinweg 40, 35037 Marburg</p>
+            <p>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=Steinweg+40,+35037+Marburg" target="_blank">
+                    Steinweg 40, 35037 Marburg
+                </a>
+            </p>
             <p>Telefon: <a href="tel:+4915227532359">0152/27532359</a></p>
             <p>E-Mail: <a href="mailto:info@friseursalon-nuraybal.de">info@friseursalon-nuraybal.de</a></p>
 
             <!-- Google Maps Embed -->
-            <div id="map"></div> <!-- Aqui adicionaremos o Google Maps -->
+            <div id="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5995.58103343311!2d8.7661076702346!3d50.815766181977544!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bc6304a7235171%3A0x52ad5342f86a5a74!2sFriseursalon%20Nuray%20Bal%20Marburg!5e0!3m2!1spt-BR!2sde!4v1723711190799!5m2!1spt-BR!2sde"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </div>
     </section>
+
 
     <!-- Rodapé -->
     <footer>
