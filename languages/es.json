@@ -1,29 +1,59 @@
 {
-    "header": {
-        "home": "Inicio",
-        "about": "Sobre Nosotros",
-        "services": "Servicios",
-        "contact": "Contacto"
-    },
-    "home": {
-        "welcome": "Bienvenido a Friseur Salon Nuray Bal",
-        "description": "Experimente nuestro servicio de alta calidad en un ambiente acogedor."
-    },
-    "about": {
-        "title": "Sobre Nosotros",
-        "description": "Somos un equipo profesional de peluqueros especializados en peinados modernos y clásicos."
-    },
-    "services": {
-        "title": "Nuestros Servicios",
-        "cut": "Corte de Pelo",
-        "color": "Coloración",
-        "style": "Estilismo",
-        "products": "Productos de Cuidado"
-    },
-    "contact": {
-        "title": "Contacto",
-        "address": "Steinweg 40, 35037 Marburg",
-        "phone": "Teléfono: 0152/27532359",
-        "email": "Correo electrónico: info@friseursalon-nuraybal.de"
-    }
+  "header": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "about": "Sobre Nosotros",
+    "contact": "Ubicación"
+  },
+  "home": {
+    "welcome": "Bienvenido a la Peluquería Nuray Bal",
+    "description": "Experimente nuestro servicio de primera clase en un ambiente acogedor."
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "service1": "Corte de Pelo",
+    "price1": "20 €",
+    "service2": "Corte para Estudiantes",
+    "price2": "18 €",
+    "service3": "Lavado y Corte de Pelo",
+    "price3": "25 €",
+    "service4": "Cuidado de Barba desde",
+    "price4": "12 €",
+    "service5": "Depilación de Cejas",
+    "price5": "7 €",
+    "service6": "Depilación de Cejas y Cera",
+    "price6": "9 €",
+    "service7": "Cuidado Facial con Mascarilla de Arcilla desde",
+    "price7": "10 €",
+    "service8": "Corte de Pelo (Niños y Adolescentes)",
+    "price8": "15 €",
+    "hoursTitle": "Horarios de Atención",
+    "hour1": "Martes y Miércoles: 9:00 AM - 6:00 PM",
+    "hour2": "Jueves: 9:00 AM - 7:00 PM",
+    "hour3": "Viernes: 9:00 AM - 6:00 PM",
+    "hour4": "Sábado: 9:30 AM - 3:00 PM",
+    "hour5": "Lunes: Cerrado"
+  },
+  "about": {
+    "title": "Sobre Nosotros",
+    "description1": "Bienvenido a la Peluquería Nuray Bal, su lugar de confianza para cortes de pelo elegantes y cuidado excepcional para toda la familia. Nuestro experimentado equipo de peluqueros se dedica con pasión al arte del corte y peinado, especializándose en peinados tanto modernos como clásicos para mujeres y hombres. Además de cortes de pelo individuales, también ofrecemos cuidado profesional de barba para asegurarnos de que siempre luzca lo mejor posible.",
+    "description2": "Entendemos que cada cliente es único y damos gran importancia a integrar su personalidad y estilo de vida en su apariencia. Ya sea que esté probando un nuevo estilo o refrescando su corte actual, estamos aquí para ofrecerle nuestra experiencia y creatividad.",
+    "description3": "Nuestro salón ofrece un ambiente relajado y amigable donde mujeres, hombres y niños se sienten a gusto. Utilizamos solo productos de alta calidad y las técnicas más modernas para asegurar que su cabello y barba no solo luzcan bien, sino que también se mantengan saludables y bien cuidados.",
+    "description4": "Visítenos con toda la familia y experimente nuestro servicio integral. Esperamos darle la bienvenida y sorprenderle con nuestra habilidad y dedicación."
+  },
+  "contact": {
+    "title": "Ubicación",
+    "address": "Steinweg 40, 35037 Marburg",
+    "phone": "Teléfono: 0152/27532359"
+  },
+  "footer": {
+    "salonName": "Peluquería",
+    "hoursTitle": "Horarios de Atención",
+    "hour1": "Martes y Miércoles: 9:00 AM - 6:00 PM",
+    "hour2": "Jueves: 9:00 AM - 7:00 PM",
+    "hour3": "Viernes: 9:00 AM - 6:00 PM",
+    "hour4": "Sábado: 9:30 AM - 3:00 PM",
+    "copyright": "2024 Elderson Luciano Mezzomo - Desarrollador Frontend Apasionado de Marburg, Alemania.",
+    "instagram": "Síguenos en Instagram"
+  }
 }

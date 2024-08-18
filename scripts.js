@@ -1,164 +1,130 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const header = document.querySelector('header');
-    const sections = document.querySelectorAll('section');
-    const hamburgerIcon = document.querySelector('.hamburger-menu');
-    const mobileNav = document.querySelector('.mobile-nav');
-    let isScrolling = false;
-    let mouseMoving = false;
-    let mouseMoveTimeout;
-
-    // Função para verificar a posição da rolagem e ajustar o cabeçalho
-    function checkScroll() {
-        if (window.innerWidth > 768) {  // Aplica a lógica de transição somente se a largura da tela for maior que 768px
-            if (window.scrollY > 50 || mouseMoving) {
-                header.classList.add('header-scrolled');
-            } else {
-                header.classList.remove('header-scrolled');
-            }
-        } else { // Em dispositivos móveis
-            header.classList.add('header-scrolled'); // Garante que o cabeçalho seja sempre sólido
-        }
-    }
-
-    // Função para detectar movimento do mouse
-    function handleMouseMove() {
-        mouseMoving = true;
-        checkScroll();
-
-        // Reseta a variável após um breve período de inatividade do mouse
-        clearTimeout(mouseMoveTimeout);
-        mouseMoveTimeout = setTimeout(() => {
-            mouseMoving = false;
-            checkScroll();
-        }, 1000);
-    }
-
-    // Função para rolar suavemente até a seção correspondente
-    function scrollToSection(direction) {
-        if (isScrolling) return;
-        isScrolling = true;
-
-        const currentSectionIndex = [...sections].findIndex(section => {
-            const rect = section.getBoundingClientRect();
-            return rect.top >= 0 && rect.top < window.innerHeight;
-        });
-
-        let nextSectionIndex = currentSectionIndex;
-
-        if (direction === 'down' && currentSectionIndex < sections.length - 1) {
-            nextSectionIndex++;
-        } else if (direction === 'up' && currentSectionIndex > 0) {
-            nextSectionIndex--;
-        }
-
-        sections[nextSectionIndex].scrollIntoView({ behavior: 'smooth' });
-
-        setTimeout(() => {
-            isScrolling = false;
-        }, 1000);
-    }
-
-    // Detectar rolagem do mouse
-    window.addEventListener('wheel', (event) => {
-        if (event.deltaY > 0) {
-            scrollToSection('down');
-        } else {
-            scrollToSection('up');
-        }
-    });
-
-    // Detectar clique nos links do menu para rolar até a seção correspondente
-    const navLinks = document.querySelectorAll('.nav-menu a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', (event) => {
-            event.preventDefault();
-            const targetSection = document.querySelector(link.getAttribute('href'));
-            targetSection.scrollIntoView({ behavior: 'smooth' });
-        });
-    });
-
-    // Executa a função ao rolar a página
-    window.addEventListener('scroll', checkScroll);
-
-    // Adiciona um listener para o movimento do mouse
-    document.addEventListener('mousemove', handleMouseMove);
-
-    // Executa a função uma vez para verificar a posição inicial
-    checkScroll();
-
-    // Função para alternar a visibilidade do menu mobile
-    function toggleMobileMenu() {
-        mobileNav.classList.toggle('show');
-    }
-
-    // Adiciona o evento de clique ao ícone do hambúrguer
-    hamburgerIcon.addEventListener('click', () => {
-        mobileNav.classList.toggle('show'); // Adiciona ou remove a classe 'show' para mostrar/ocultar o menu
-    });
-
-    // Funções para o seletor de idiomas
-    const defaultLang = 'de'; // Define o idioma padrão como alemão
-    loadLanguage(defaultLang); // Carrega o idioma padrão ao iniciar
-
-    const languageSelector = document.querySelector('#current-lang');
-    const languageOptions = document.querySelector('#lang-options');
-
-    languageSelector.addEventListener('click', () => {
-        languageOptions.classList.toggle('show');
-    });
-
-    document.querySelectorAll('.lang-options .lang-btn').forEach(button => {
-        button.addEventListener('click', () => {
-            const selectedLang = button.id.toLowerCase();
-            loadLanguage(selectedLang);
-            languageOptions.classList.remove('show');
-
-            // Atualiza a bandeira principal
-            const currentLangImg = languageSelector.querySelector('img');
-            const selectedLangImg = button.querySelector('img');
-            currentLangImg.src = selectedLangImg.src;
-            currentLangImg.alt = selectedLangImg.alt;
-        });
-    });
+document.addEventListener("DOMContentLoaded", function () {
+    const currentLangButton = document.getElementById('current-lang');
+    const langOptions = document.getElementById('lang-option');
+    const languageButtons = document.querySelectorAll('.lang-btn');
 
     function loadLanguage(lang) {
-        fetch(`languages/${lang}.json`)
+        fetch(`/languages/${lang}.json`)
             .then(response => response.json())
-            .then(translations => {
-                document.querySelector('#home-link').textContent = translations.header.home;
-                document.querySelector('#about-link').textContent = translations.header.about;
-                document.querySelector('#services-link').textContent = translations.header.services;
-                document.querySelector('#contact-link').textContent = translations.header.contact;
-                document.querySelector('.home-section h2').textContent = translations.home.welcome;
-                document.querySelector('.home-section p').textContent = translations.home.description;
-                document.querySelector('.about-section h2').textContent = translations.about.title;
-                document.querySelector('.about-section p').textContent = translations.about.description;
-                document.querySelector('.services-section h2').textContent = translations.services.title;
-                document.querySelector('.contact-section h2').textContent = translations.contact.title;
-                document.querySelector('.contact-section p:nth-of-type(1)').textContent = translations.contact.address;
-                document.querySelector('.contact-section p:nth-of-type(2)').textContent = translations.contact.phone;
-                document.querySelector('.contact-section p:nth-of-type(3)').
-                document.querySelector('.contact-section p:nth-of-type(3)').textContent = translations.contact.email;
-            })
+            .then(data => applyTranslations(data))
             .catch(error => console.error('Erro ao carregar o arquivo de idioma:', error));
     }
 
-    // Função para inicializar o mapa do Google Maps
-    function initMap() {
-        const salonLocation = { lat: 50.810, lng: 8.770 }; // Coordenadas do salão
-        const map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 15,
-            center: salonLocation
-        });
+    function applyTranslations(translations) {
+        // Header links
+        document.querySelector('#home-link .nav-text').textContent = translations.header.home;
+        document.querySelector('#services-link .nav-text').textContent = translations.header.services;
+        document.querySelector('#about-link .nav-text').textContent = translations.header.about;
+        document.querySelector('#contact-link .nav-text').textContent = translations.header.contact;
 
-        new google.maps.Marker({
-            position: salonLocation,
-            map: map
-        });
+        // Home Section
+        document.getElementById('home-welcome').textContent = translations.home.welcome;
+        document.getElementById('home-description').textContent = translations.home.description;
+
+        // Services Section
+        document.getElementById('services-title').textContent = translations.services.title;
+        document.getElementById('service-1').querySelector('.service-name').textContent = translations.services.service1;
+        document.getElementById('service-1').querySelector('.service-price').textContent = translations.services.price1;
+        document.getElementById('service-2').querySelector('.service-name').textContent = translations.services.service2;
+        document.getElementById('service-2').querySelector('.service-price').textContent = translations.services.price2;
+        document.getElementById('service-3').querySelector('.service-name').textContent = translations.services.service3;
+        document.getElementById('service-3').querySelector('.service-price').textContent = translations.services.price3;
+        document.getElementById('service-4').querySelector('.service-name').textContent = translations.services.service4;
+        document.getElementById('service-4').querySelector('.service-price').textContent = translations.services.price4;
+        document.getElementById('service-5').querySelector('.service-name').textContent = translations.services.service5;
+        document.getElementById('service-5').querySelector('.service-price').textContent = translations.services.price5;
+        document.getElementById('service-6').querySelector('.service-name').textContent = translations.services.service6;
+        document.getElementById('service-6').querySelector('.service-price').textContent = translations.services.price6;
+        document.getElementById('service-7').querySelector('.service-name').textContent = translations.services.service7;
+        document.getElementById('service-7').querySelector('.service-price').textContent = translations.services.price7;
+        document.getElementById('service-8').querySelector('.service-name').textContent = translations.services.service8;
+        document.getElementById('service-8').querySelector('.service-price').textContent = translations.services.price8;
+
+        // Hours in Services Section
+        document.getElementById('hours-title').textContent = translations.services.hoursTitle;
+        document.getElementById('hour-1').textContent = translations.services.hour1;
+        document.getElementById('hour-2').textContent = translations.services.hour2;
+        document.getElementById('hour-3').textContent = translations.services.hour3;
+        document.getElementById('hour-4').textContent = translations.services.hour4;
+        document.getElementById('hour-5').textContent = translations.services.hour5;
+
+        // About Us Section
+        document.getElementById('about-title').textContent = translations.about.title;
+        document.getElementById('about-description-1').textContent = translations.about.description1;
+        document.getElementById('about-description-2').textContent = translations.about.description2;
+        document.getElementById('about-description-3').textContent = translations.about.description3;
+        document.getElementById('about-description-4').textContent = translations.about.description4;
+
+        // Contact Section
+        document.getElementById('contact-title').textContent = translations.contact.title;
+        document.getElementById('contact-address').textContent = translations.contact.address;
+        document.getElementById('contact-phone').textContent = translations.contact.phone;
+
+        // Footer Section
+        document.getElementById('footer-salon-name').textContent = translations.footer.salonName + " Nuray Bal";
+        document.getElementById('footer-hours-title').textContent = translations.footer.hoursTitle;
+        document.getElementById('footer-hour-1').textContent = translations.footer.hour1;
+        document.getElementById('footer-hour-2').textContent = translations.footer.hour2;
+        document.getElementById('footer-hour-3').textContent = translations.footer.hour3;
+        document.getElementById('footer-hour-4').textContent = translations.footer.hour4;
+        document.getElementById('footer-text').textContent = translations.footer.copyright;
+        document.getElementById('footer-instagram').textContent = translations.footer.instagram;
     }
 
-    // Inicializa o mapa se o elemento de mapa estiver presente
-    if (document.getElementById('map')) {
-        initMap();
+    languageButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const lang = button.id;
+            const imgSrc = button.querySelector('img').src;
+            currentLangButton.querySelector('img').src = imgSrc;
+            langOptions.style.display = 'none';
+            languageButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            loadLanguage(lang);
+        });
+    });
+
+    // Exibe ou oculta as opções de idioma ao clicar na bandeira
+    currentLangButton.addEventListener('click', () => {
+        langOptions.style.display = langOptions.style.display === 'block' ? 'none' : 'block';
+    });
+
+    // Carrega o idioma padrão (alemão)
+    loadLanguage('de');
+    document.getElementById('de').classList.add('active');
+});
+
+// Código de rolagem do cabeçalho
+document.addEventListener('DOMContentLoaded', () => {
+    const header = document.querySelector('.header');
+    const logoImg = document.getElementById('logo-img');
+    let mouseMoved = false;
+    let mouseMoveTimeout;
+
+    function toggleHeader() {
+        if (window.scrollY > 50 || mouseMoved) {
+            header.classList.remove('transparent');
+            header.classList.add('scrolled');
+            logoImg.src = 'assets/logo_branco.png';
+        } else {
+            header.classList.add('transparent');
+            header.classList.remove('scrolled');
+            logoImg.src = 'assets/logo_cinza.png';
+        }
     }
+
+    function handleMouseMove() {
+        mouseMoved = true;
+        toggleHeader();
+
+        clearTimeout(mouseMoveTimeout);
+        mouseMoveTimeout = setTimeout(() => {
+            mouseMoved = false;
+            toggleHeader();
+        }, 1000);
+    }
+
+    window.addEventListener('scroll', toggleHeader);
+    document.addEventListener('mousemove', handleMouseMove);
+
+    toggleHeader(); // Inicializa o cabeçalho corretamente no carregamento
 });

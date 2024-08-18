@@ -1,29 +1,59 @@
 {
-    "header": {
-        "home": "Anasayfa",
-        "about": "Hakkımızda",
-        "services": "Hizmetler",
-        "contact": "İletişim"
-    },
-    "home": {
-        "welcome": "Friseur Salon Nuray Bal'a Hoşgeldiniz",
-        "description": "Rahat bir atmosferde en kaliteli hizmetimizi deneyimleyin."
-    },
-    "about": {
-        "title": "Hakkımızda",
-        "description": "Modern ve klasik saç modelleri konusunda uzmanlaşmış profesyonel bir kuaför ekibiyiz."
-    },
-    "services": {
-        "title": "Hizmetlerimiz",
-        "cut": "Saç Kesimi",
-        "color": "Renklendirme",
-        "style": "Şekillendirme",
-        "products": "Bakım Ürünleri"
-    },
-    "contact": {
-        "title": "İletişim",
-        "address": "Steinweg 40, 35037 Marburg",
-        "phone": "Telefon: 0152/27532359",
-        "email": "E-posta: info@friseursalon-nuraybal.de"
-    }
+  "header": {
+    "home": "Ana Sayfa",
+    "services": "Hizmetler",
+    "about": "Hakkımızda",
+    "contact": "Konum"
+  },
+  "home": {
+    "welcome": "Nuray Bal Kuaför Salonuna Hoş Geldiniz",
+    "description": "Sıcak bir ortamda birinci sınıf hizmetimizi deneyimleyin."
+  },
+  "services": {
+    "title": "Hizmetlerimiz",
+    "service1": "Saç Kesimi",
+    "price1": "20 €",
+    "service2": "Öğrenciler İçin Saç Kesimi",
+    "price2": "18 €",
+    "service3": "Yıkama ve Saç Kesimi",
+    "price3": "25 €",
+    "service4": "Sakal Bakımı - Başlangıç",
+    "price4": "12 €",
+    "service5": "Kaş Alma",
+    "price5": "7 €",
+    "service6": "Kaş Alma ve Ağda",
+    "price6": "9 €",
+    "service7": "Kil Maskesi ile Yüz Bakımı - Başlangıç",
+    "price7": "10 €",
+    "service8": "Çocuk ve Gençler İçin Saç Kesimi",
+    "price8": "15 €",
+    "hoursTitle": "Çalışma Saatleri",
+    "hour1": "Salı ve Çarşamba: 09:00 - 18:00",
+    "hour2": "Perşembe: 09:00 - 19:00",
+    "hour3": "Cuma: 09:00 - 18:00",
+    "hour4": "Cumartesi: 09:30 - 15:00",
+    "hour5": "Pazartesi: Kapalı"
+  },
+  "about": {
+    "title": "Hakkımızda",
+    "description1": "Nuray Bal Kuaför Salonu'na hoş geldiniz. Ailenizin tüm üyelerine stil sahibi saç kesimleri ve mükemmel bakım sunan güvenilir yeriniz. Deneyimli kuaför ekibimiz, kadınlar ve erkekler için hem modern hem de klasik saç modellerinde uzmanlaşarak, saç kesimi ve şekillendirme sanatına tutkuyla bağlıdır. Bireysel saç kesimlerinin yanı sıra, her zaman en iyi şekilde görünmenizi sağlamak için profesyonel sakal bakımı da sunuyoruz.",
+    "description2": "Her müşterinin benzersiz olduğunu anlıyor ve kişiliğinizi ve yaşam tarzınızı görünümünüze entegre etmeye büyük önem veriyoruz. Yeni bir stil denemek ya da mevcut saç kesiminizi yenilemek isteyin, size uzmanlığımız ve yaratıcılığımızla hizmet etmek için buradayız.",
+    "description3": "Salonumuzda kadınlar, erkekler ve çocukların kendilerini rahat hissettiği rahat ve dostane bir ortam sunuyoruz. Saçlarınızın ve sakalınızın sadece iyi görünmesini değil, aynı zamanda sağlıklı ve bakımlı kalmasını sağlamak için sadece yüksek kaliteli ürünler ve en modern teknikler kullanıyoruz.",
+    "description4": "Bütün ailenizle birlikte bizi ziyaret edin ve kapsamlı hizmetimizi deneyimleyin. Sizi ağırlamayı ve becerimizle sizi etkilemeyi dört gözle bekliyoruz."
+  },
+  "contact": {
+    "title": "Konum",
+    "address": "Steinweg 40, 35037 Marburg",
+    "phone": "Telefon: 0152/27532359"
+  },
+  "footer": {
+    "salonName": "Kuaför Salonu",
+    "hoursTitle": "Çalışma Saatleri",
+    "hour1": "Salı ve Çarşamba: 09:00 - 18:00",
+    "hour2": "Perşembe: 09:00 - 19:00",
+    "hour3": "Cuma: 09:00 - 18:00",
+    "hour4": "Cumartesi: 09:30 - 15:00",
+    "copyright": "2024 Elderson Luciano Mezzomo - Marburg, Almanya'dan Tutkulu Bir Frontend Geliştirici.",
+    "instagram": "Instagram'da Bizi Takip Edin"
+  }
 }

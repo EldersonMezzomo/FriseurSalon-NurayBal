@@ -1,29 +1,59 @@
 {
-    "header": {
-        "home": "Início",
-        "about": "Sobre Nós",
-        "services": "Serviços",
-        "contact": "Contato"
-    },
-    "home": {
-        "welcome": "Bem-vindo ao Friseur Salon Nuray Bal",
-        "description": "Experimente nosso serviço de alta qualidade em um ambiente acolhedor."
-    },
-    "about": {
-        "title": "Sobre Nós",
-        "description": "Somos uma equipe profissional de cabeleireiros especializada em penteados modernos e clássicos."
-    },
-    "services": {
-        "title": "Nossos Serviços",
-        "cut": "Corte de Cabelo",
-        "color": "Coloração",
-        "style": "Estilo",
-        "products": "Produtos de Cuidado"
-    },
-    "contact": {
-        "title": "Contato",
-        "address": "Steinweg 40, 35037 Marburg",
-        "phone": "Telefone: 0152/27532359",
-        "email": "E-mail: info@friseursalon-nuraybal.de"
-    }
+  "header": {
+    "home": "Início",
+    "services": "Serviços",
+    "about": "Sobre Nós",
+    "contact": "Localização"
+  },
+  "home": {
+    "welcome": "Bem-vindo ao Salão de Beleza Nuray Bal",
+    "description": "Experimente nosso serviço de primeira classe em um ambiente acolhedor."
+  },
+  "services": {
+    "title": "Nossos Serviços",
+    "service1": "Corte",
+    "price1": "20 €",
+    "service2": "Corte para Estudantes",
+    "price2": "18 €",
+    "service3": "Lavagem & Corte",
+    "price3": "25 €",
+    "service4": "Cuidados com a Barba a partir de",
+    "price4": "12 €",
+    "service5": "Depilação de Sobrancelhas",
+    "price5": "7 €",
+    "service6": "Depilação de Sobrancelhas & Cera",
+    "price6": "9 €",
+    "service7": "Cuidados Faciais com Máscara de Argila a partir de",
+    "price7": "10 €",
+    "service8": "Corte (Crianças & Jovens)",
+    "price8": "15 €",
+    "hoursTitle": "Horários de Funcionamento",
+    "hour1": "Terça & Quarta-feira: 9:00 - 18:00",
+    "hour2": "Quinta-feira: 9:00 - 19:00",
+    "hour3": "Sexta-feira: 9:00 - 18:00",
+    "hour4": "Sábado: 9:30 - 15:00",
+    "hour5": "Segunda-feira: Fechado"
+  },
+  "about": {
+    "title": "Sobre Nós",
+    "description1": "Bem-vindo ao Salão de Beleza Nuray Bal, seu lugar de confiança para cortes de cabelo elegantes e cuidados excepcionais para toda a família. Nossa equipe experiente de cabeleireiros dedica-se com paixão à arte do corte e do estilo, especializando-se em penteados modernos e clássicos tanto para mulheres quanto para homens. Além de cortes personalizados, oferecemos também cuidados profissionais com a barba para garantir que você esteja sempre com a melhor aparência.",
+    "description2": "Entendemos que cada cliente é único e valorizamos a integração da sua personalidade e estilo de vida em seu visual. Quer você esteja experimentando um novo estilo ou atualizando seu corte atual – estamos aqui para oferecer nossa expertise e criatividade.",
+    "description3": "Nosso salão oferece um ambiente descontraído e amigável, onde mulheres, homens e crianças se sentem igualmente à vontade. Usamos apenas produtos de alta qualidade e técnicas modernas para garantir que seu cabelo e barba não só tenham uma boa aparência, mas também permaneçam saudáveis e bem cuidados.",
+    "description4": "Visite-nos com toda a família e experimente nosso serviço completo. Estamos ansiosos para recebê-lo e encantá-lo com nossa habilidade e dedicação."
+  },
+  "contact": {
+    "title": "Localização",
+    "address": "Steinweg 40, 35037 Marburg",
+    "phone": "Telefone: 0152/27532359"
+  },
+  "footer": {
+    "salonName": "Salão de Beleza",
+    "hoursTitle": "Horários de Funcionamento",
+    "hour1": "Terça & Quarta-feira: 9:00 - 18:00",
+    "hour2": "Quinta-feira: 9:00 - 19:00",
+    "hour3": "Sexta-feira: 9:00 - 18:00",
+    "hour4": "Sábado: 9:30 - 15:00",
+    "copyright": "2024 Elderson Luciano Mezzomo - Desenvolvedor Frontend apaixonado de Marburg, Alemanha.",
+    "instagram": "Siga-nos no Instagram"
+  }
 }

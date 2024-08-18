@@ -1,29 +1,59 @@
 {
-    "header": {
-        "home": "Startseite",
-        "about": "Über Uns",
-        "services": "Dienstleistungen",
-        "contact": "Kontakt"
-    },
-    "home": {
-        "welcome": "Willkommen bei Friseur Salon Nuray Bal",
-        "description": "Erleben Sie unseren erstklassigen Service in einer gemütlichen Atmosphäre."
-    },
-    "about": {
-        "title": "Über Uns",
-        "description": "Wir sind ein professionelles Friseurteam, das sich auf moderne und klassische Frisuren spezialisiert hat."
-    },
-    "services": {
-        "title": "Unsere Dienstleistungen",
-        "cut": "Haarschnitt",
-        "color": "Coloration",
-        "style": "Styling",
-        "products": "Pflegeprodukte"
-    },
-    "contact": {
-        "title": "Kontakt",
-        "address": "Steinweg 40, 35037 Marburg",
-        "phone": "Telefon: 0152/27532359",
-        "email": "E-Mail: info@friseursalon-nuraybal.de"
-    }
+  "header": {
+    "home": "Startseite",
+    "services": "Dienstleistungen",
+    "about": "Über Uns",
+    "contact": "Wegbeschreibung"
+  },
+  "home": {
+    "welcome": "Willkommen bei Friseur Salon Nuray Bal",
+    "description": "Erleben Sie unseren erstklassigen Service in einer gemütlichen Atmosphäre."
+  },
+  "services": {
+    "title": "Unsere Dienstleistungen",
+    "service1": "Schneiden",
+    "price1": "20 €",
+    "service2": "Schneiden für Studierende",
+    "price2": "18 €",
+    "service3": "Waschen & Schneiden",
+    "price3": "25 €",
+    "service4": "Bartpflege ab",
+    "price4": "12 €",
+    "service5": "Augenbrauen zupfen",
+    "price5": "7 €",
+    "service6": "Augenbrauen zupfen & Wax",
+    "price6": "9 €",
+    "service7": "Gesichtspflege mit Tonmaske ab",
+    "price7": "10 €",
+    "service8": "Schneiden (Kinder & Jugendliche)",
+    "price8": "15 €",
+    "hoursTitle": "Öffnungszeiten",
+    "hour1": "Di. & Mittwoch: 9:00 - 18:00 Uhr",
+    "hour2": "Donnerstag: 9:00 - 19:00 Uhr",
+    "hour3": "Freitag: 9:00 - 18:00 Uhr",
+    "hour4": "Samstag: 9:30 - 15:00 Uhr",
+    "hour5": "Montag Ruhetag"
+  },
+  "about": {
+    "title": "Über Uns",
+    "description1": "Willkommen im Friseur Salon Nuray Bal, Ihrem vertrauten Ort für stilvolle Haarschnitte und exzellente Pflege für die ganze Familie. Unser erfahrenes Team von Friseuren widmet sich mit Leidenschaft der Kunst des Haarschnitts und Stylings, wobei wir uns auf moderne und klassische Frisuren sowohl für Frauen als auch für Männer spezialisieren. Neben individuellen Haarschnitten bieten wir auch professionelle Bartpflege an, um sicherzustellen, dass Sie immer bestens aussehen.",
+    "description2": "Wir verstehen, dass jeder Kunde einzigartig ist, und legen großen Wert darauf, Ihre Persönlichkeit und Ihren Lebensstil in Ihren Look zu integrieren. Ob Sie einen neuen Stil ausprobieren oder Ihre bestehende Frisur auffrischen möchten – wir stehen Ihnen mit unserer Expertise und Kreativität zur Seite.",
+    "description3": "Unser Salon bietet eine entspannte und freundliche Atmosphäre, in der sich Frauen, Männer und Kinder gleichermaßen wohlfühlen. Wir verwenden nur hochwertige Produkte und modernste Techniken, um sicherzustellen, dass Ihr Haar und Bart nicht nur gut aussehen, sondern auch gesund und gepflegt bleiben.",
+    "description4": "Besuchen Sie uns mit der ganzen Familie und erleben Sie unseren umfassenden Service. Wir freuen uns darauf, Sie bei uns willkommen zu heißen und Sie mit unserem Können und unserer Hingabe zu begeistern."
+  },
+  "contact": {
+    "title": "Wegbeschreibung",
+    "address": "Steinweg 40, 35037 Marburg",
+    "phone": "Telefon: 0152/27532359"
+  },
+  "footer": {
+    "salonName": "Friseur Salon",
+    "hoursTitle": "Öffnungszeiten",
+    "hour1": "Dienstag & Mittwoch: 9:00 - 18:00 Uhr",
+    "hour2": "Donnerstag: 9:00 - 19:00 Uhr",
+    "hour3": "Freitag: 9:00 - 18:00 Uhr",
+    "hour4": "Samstag: 9:30 - 15:00 Uhr",
+    "copyright": "2024 Elderson Luciano Mezzomo - Leidenschaftlicher Frontend-Entwickler aus Marburg, Deutschland.",
+    "instagram": "Folgen Sie uns auf Instagram"
+  }
 }
