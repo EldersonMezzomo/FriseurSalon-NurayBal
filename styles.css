@@ -254,13 +254,13 @@ section {
     font-size: clamp(1.6rem, 5vw, 3rem);
     margin-bottom: 1rem;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
-    color: #c298eb;
+    color: var(--accent-color);
 }
 
 .home-section p {
     font-size: clamp(1.3rem, 2.2vw, 2rem);
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 2);
-    color: #ffffff;
+    color: var(--light-color);
 }
 
 /* Services Section */
@@ -346,7 +346,7 @@ section {
 
 /* About Us Section */
 .about-section {
-    background-color: #555;
+    background-color: var(--secondary-color);
     color: var(--light-color);
 }
 
